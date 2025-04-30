@@ -1,0 +1,18 @@
+{
+  "name": "taskmanager-api",
+  "version": "1.0.0",
+  "description": "Airtribe project 1",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "author": "Sai Kiran",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
