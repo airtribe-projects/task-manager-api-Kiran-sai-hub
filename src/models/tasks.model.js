@@ -42,11 +42,10 @@ export default class TaskModel{
     }
 
     static delete(id){
-        const index = tasks.findIndex((task)=> task.id === id);
-        tasks.splice(index,1);
+        const index = tasks.findIndex((task)=> task.id == id);
+        const task = tasks.splice(index,1);
+        return task;
     }
-
-
 
 }
 

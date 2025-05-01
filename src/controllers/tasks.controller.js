@@ -72,6 +72,24 @@ const update = (req,res)=>{
         message: "Task with ID updated",
         task: task,
     });
-}
+};
 
-export {getTasks, getById, add, update};
+const deleteTask = (req,res)=>{
+    const id = req.params.id;
+
+    const task = TaskModel.delete(id);
+    if(!task){
+        return res.sttus(404).json({
+            success: true,
+            mesage:"No task found",
+        });
+    }
+    res.status(200).json({
+        success: true,
+        message:"Task deleted",
+        task: task,
+    })
+
+};
+
+export {getTasks, getById, add, update, deleteTask};
